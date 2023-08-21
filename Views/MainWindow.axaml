@@ -23,7 +23,12 @@
 			<Button Height="25" Width="25" VerticalAlignment="Top" Click="HomeClick" Name="HomeBtn">
 				<Image Source="C:\Users\Z6SFU\Desktop\Skole_H2\GUI Programmering\GUIMvvM\bin\Debug\net6.0\Home.png"></Image>
 			</Button>
-			<uc:ContentAreaView></uc:ContentAreaView>
 		</WrapPanel>
+		<uc:DataGridProductsView Name="Model" DataContext="{Binding model}"></uc:DataGridProductsView>
+		<StackPanel IsVisible="{Binding Ersynlig}" Name="FUCKMMMMVMVMMVMVMVM">
+			
+		<uc:DatagridProductDetailsView Name="Model2" DataContext="{Binding model2}" ></uc:DatagridProductDetailsView>
+		</StackPanel>
+
 	</StackPanel>
 </Window>

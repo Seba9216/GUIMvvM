@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace GUIMvvM.Models
 {
-    public class Produkt : INotifyPropertyChanged
+    public class Produkt
     {
         public string Navn
         {

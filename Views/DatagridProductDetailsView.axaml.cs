@@ -11,6 +11,6 @@ public partial class DatagridProductDetailsView : UserControl
     public DatagridProductDetailsView()
     {
         InitializeComponent();
-        DataContext = new DatagridProductDetailsViewModel(ContentAreaView.Efiel as Produkt);
+        
     }
 }

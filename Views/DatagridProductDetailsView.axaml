@@ -8,9 +8,22 @@
 			x:DataType="vm:DatagridProductDetailsViewModel"
 			 >
 
-	<StackPanel Orientation="Vertical">
-		<DataGrid ItemsSource="{Binding Product}" Name="Hej" Background="Red" Height="200" AutoGenerateColumns="True">
+	<StackPanel Orientation="Vertical" Name="StackPanel">
+		
 
-		</DataGrid>
+		<Label>Navn : </Label>
+		<TextBox Text="{Binding Produkt.Navn}" ></TextBox>
+		<Label>SalgsPris : </Label>
+		<TextBox Text="{Binding Produkt.SalgsPris}" ></TextBox>
+		<Label>IndkøbsPris : </Label>
+		<TextBox Text="{Binding Produkt.IndKøbsPris}" ></TextBox>
+		<Label>Beskrivelse : </Label>
+		<TextBox Text="{Binding Produkt.Beskrivelse}" ></TextBox>
+		<Label>LagerAntal : </Label>
+		<TextBox Text="{Binding Produkt.Lagerantal}" ></TextBox>
+		<Label>ProduktEnhed : </Label>
+		<TextBox Text="{Binding Produkt.Produktenhed}" ></TextBox>
+		<Label>Hidden : </Label>
+		<TextBox Text="{Binding Produkt.Hidden}" ></TextBox>
 	</StackPanel>
 </UserControl>

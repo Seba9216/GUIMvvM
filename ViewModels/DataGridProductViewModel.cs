@@ -1,4 +1,5 @@
-﻿using GUIMvvM.Models;
+﻿using Avalonia.Interactivity;
+using GUIMvvM.Models;
 using ReactiveUI;
 using System.Collections.ObjectModel;
 
@@ -6,6 +7,9 @@ namespace GUIMvvM.ViewModels
 {
     public class DataGridProductViewModel : ViewModelBase
     {
+
+        public event TappedEventHandler clickdatagridEvent; 
+
         static ObservableCollection<Produkt>  products = new ObservableCollection<Produkt>();
         public  ObservableCollection<Produkt> Products
         {
@@ -14,9 +18,15 @@ namespace GUIMvvM.ViewModels
             set => this.RaiseAndSetIfChanged(ref products, value, nameof(Products));
         }
 
+        public void ProductChanged(Produkt produkt)
+        {
+            ClickdatagridEvent clickdatagrid = new();
+             clickdatagrid.Clicked = produkt;
+            clickdatagridEvent.Invoke(this, clickdatagrid); 
+        }
+
         public  DataGridProductViewModel()
         {
-
             if (products.Count > 0) return; 
             var products1 = new ObservableCollection<Produkt>
             {
@@ -81,9 +91,6 @@ namespace GUIMvvM.ViewModels
             products = new ObservableCollection<Produkt>(products1);
         }
 
-
-
-
-
+       
     }
 }

@@ -8,7 +8,7 @@
 			 x:DataType="vm:DataGridProductViewModel">
 	
 	<StackPanel Orientation="Vertical">
-		<DataGrid ItemsSource="{Binding Products}" Name="Hej" Background="Red" Height="200" Width="300">
+		<DataGrid ItemsSource="{Binding Products}" Name="Hej" Background="Red" Height="200" Width="300" >
 			<DataGrid.Columns>
 				<DataGridTextColumn   Header="Navn" Binding="{Binding Navn}"></DataGridTextColumn>
 				<DataGridTextColumn Header="SalgsPris" Binding="{Binding SalgsPris}"></DataGridTextColumn>

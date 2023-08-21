@@ -19,13 +19,9 @@ public partial class DataGridProductsView : UserControl
 
     public void chosen(object sender, RoutedEventArgs e)
     {
-        
-        if (sender is DataGrid data)
-        {
-            var item = data.SelectedItem as Produkt;
-            if (item == null) return;
-            ContentAreaView.Efiel = item; 
-            ContentAreaView.Navigate(new DatagridProductDetailsView());
-        }
+        Hej.IsVisible = false; 
+       DataGridProductViewModel viewModel = (DataGridProductViewModel)DataContext;
+        viewModel.ProductChanged(Hej.SelectedItem as Produkt); 
+
     }
 }
