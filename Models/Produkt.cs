@@ -12,7 +12,7 @@ namespace GUIMvvM.Models
         public string Navn
         {
             get
-            {
+          {
                 return navn;
             }
             set {
